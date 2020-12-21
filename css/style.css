@@ -1,0 +1,257 @@
+:root{
+    --main-color: #16A085;
+    --bg-color: #000;
+}
+html{
+    font-size: 17px;   
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    height: 2000px;
+}
+/*======================  GLOBAL STYLING ================*/
+span, a, img{
+    display: inline-block;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.row{
+    overflow: hidden;
+}
+.clearfix{
+    clear: both;
+}
+.overlay{
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.main-bg{
+    background-color: var(--main-color) !important;
+}
+.main-text{
+    color: var(--main-color) !important;
+}
+
+.btn{
+    padding: 15px 25px;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #eee;
+    color: #eee;
+    margin: 20px 5px;
+    font-size: 1.2rem;
+    transition: .5s;
+}
+.btn:hover{
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+.normal-radius{
+    border-radius: 3px !important;
+}
+.main-bg.btn{
+    border-color: var(--main-color) !important;
+}
+.section-title{
+    margin: 20px 0;
+}
+.section-title h2{
+    text-align: center;
+}
+section {
+    padding: 40px 0;
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin-bottom: 20px;
+}
+/*======================  /GLOBAL STYLING ================*/
+
+/*============== Header Styling  ==========*/
+header{
+    background-image: url('../imgs/pharos11-bg5.jpg');
+}
+
+header nav{
+    background-color: var(--bg-color);
+}
+header nav .logo{
+    float: left;
+    width: 30%;
+}
+header nav .logo a{
+    color: #fff;
+    margin: 10px 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+header nav .logo a span{
+    color: var(--main-color);
+    font-size: 3rem;
+}
+header nav .navigation{
+    float: left;
+    width: 70%;
+}
+header nav .navigation ul li{
+    display: inline-block;
+}
+header nav .navigation ul li a{
+    color: #fff;
+    margin: 15px 5px;
+    padding: 15px 20px;
+    font-size: 1rem;
+}
+header nav .navigation ul li.active a,
+header nav .navigation ul li:hover a{
+    background-color: var(--main-color);
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+header .header-content{
+    color: #ffff;
+    padding: 20vh 0;
+}
+header .header-content h5{
+    font-size: 2rem;
+}
+header .header-content h1{
+    font-size: 3.5rem;
+    margin: 10px 0;
+}
+header .header-content p{
+    font-size: 1.5rem;
+}
+
+/*============== /Header Styling  ==========*/
+/*============== About Styling  ==========*/
+#About{
+    
+}
+#About .counter-boxes{
+    margin-top: -80px;
+}
+#About .counter-boxes .box{
+    text-align: center;
+    float: left;
+    width: calc( 100% / 3 );
+    background-color: var(--bg-color);
+    color:  #fff;
+    padding: 15px;
+}
+#About .counter-boxes .box .icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: var(--main-color);
+    margin: 10px auto;
+    font-size: 2rem;
+    line-height: 60px;
+}
+#About .counter-boxes .box h3{
+    margin: 10px 0;
+}
+#About .text{
+    float: left;
+    width: 60%;
+    padding-right: 20px;
+}
+#About .about-text{
+   overflow: visible;
+}
+#About .image{
+    float: left;
+    width: 40%;
+}
+#About .image img{
+    width: 100%;
+    transition: .5s;
+}
+#About .image img:hover{
+    box-shadow: 10px 10px 0 var(--main-color);
+}
+
+/*============== /About Styling  ==========*/
+/*============== Team Styling  ==========*/
+#Team .team-member{
+    float: left;
+    width: 23%;
+    background-color: var(--main-color);
+    padding-top: 5px;
+    margin: 10px 1%;
+    color: #fff;
+    text-align: center;
+}
+#Team .team-member .img-holder{
+    position: relative;
+    overflow: hidden;
+}
+#Team .team-member .img-holder img{
+    width: 100%;
+}
+#Team .team-member .img-holder .overlay,
+#Team .team-member .img-holder ul{
+    position: absolute;
+    top: 0;
+}
+#Team .team-member h3{
+    text-transform: uppercase;
+    background-color: var(--bg-color);
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    top: -17px;
+    padding: 5px;
+}
+#Team .team-member .img-holder .overlay{
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    background-color: rgba(255,255,255,0.7);
+}
+#Team .team-member:hover .img-holder .overlay{
+    height: 100%;
+}
+#Team .team-member .img-holder ul{
+    left: 100%;
+    transition: .5s;
+    opacity: 0;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+#Team .team-member .img-holder ul li {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+}
+#Team .team-member .img-holder ul li a{
+    color: #fff;
+}
+#Team .team-member:hover .img-holder ul{
+    left: 50%;
+    opacity: 1;
+}
+
+
+/*============== /Team Styling  ==========*/
